@@ -1,4 +1,4 @@
-import { withAuth } from './_lib/auth'
+import { withAuth } from './_lib/auth.js'
 
 export default withAuth({ requireUser: true, permission: 'audit.read' }, async (req, res, { supabase }) => {
   try {

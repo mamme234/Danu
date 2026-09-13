@@ -1,4 +1,4 @@
-import { withAuth, audit } from './_lib/auth'
+import { withAuth, audit } from './_lib/auth.js'
 
 interface AppointmentRow {
   id?: string

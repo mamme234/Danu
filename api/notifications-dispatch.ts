@@ -6,7 +6,7 @@
 // NOT_CONFIGURED and return 202 — callers should display it as "notification
 // recorded" not "notification sent".
 
-import { withAuth } from './_lib/auth'
+import { withAuth } from './_lib/auth.js'
 
 interface ProviderResponse {
   ok: boolean

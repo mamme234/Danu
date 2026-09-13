@@ -1,5 +1,5 @@
 // Aggregated public read endpoint. Returns published content only.
-import { withAuth } from './_lib/auth'
+import { withAuth } from './_lib/auth.js'
 
 export default withAuth({}, async (_req, res, { supabase }) => {
   const [{ data: services }, { data: doctors }, { data: facilities }, { data: faq }, { data: articles }, { data: blocks }] = await Promise.all([

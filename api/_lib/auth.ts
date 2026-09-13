@@ -5,7 +5,7 @@
 import type { IncomingMessage, ServerResponse } from 'http'
 import supabase from '../db-client.js'
 
-export type Handler = (req: IncomingMessage, res: ServerResponse, ctx: AuthContext) => Promise<void> | void
+export type Handler = (req: IncomingMessage, res: ServerResponse, ctx: AuthContext) => Promise<unknown> | unknown
 
 export interface AuthContext {
   user: { id: string; email: string; role: string; full_name?: string }

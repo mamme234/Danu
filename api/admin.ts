@@ -1,4 +1,4 @@
-import { withAuth, audit } from './_lib/auth'
+import { withAuth, audit } from './_lib/auth.js'
 
 // Administrative updates beyond the per-resource endpoints.
 export default withAuth({ requireUser: true, permission: 'staff.write' }, async (req, res, { supabase, user }) => {

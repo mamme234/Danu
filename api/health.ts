@@ -1,5 +1,5 @@
 // Simple liveness endpoint used by the Vercel deployment and uptime checks.
-import { withAuth } from './_lib/auth'
+import { withAuth } from './_lib/auth.js'
 
 export default withAuth({}, async (_req, res, { supabase }) => {
   try {

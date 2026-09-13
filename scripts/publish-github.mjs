@@ -4,7 +4,9 @@
 
 import { spawn } from 'node:child_process'
 import { existsSync } from 'node:fs'
-import { config } from 'dotenv' // optional in sandbox
+
+// Tokens and metadata are read directly from process.env so we never need to
+// load a .env file or ship any dependency on a dotenv package.
 
 const repo = process.env.GITHUB_REPOSITORY
 const branch = process.env.GITHUB_BRANCH ?? 'main'

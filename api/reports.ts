@@ -1,5 +1,5 @@
 // Reporting endpoint: appointments, billing, doctor utilization.
-import { withAuth } from './_lib/auth'
+import { withAuth } from './_lib/auth.js'
 
 export default withAuth({ requireUser: true, permission: 'reports.read' }, async (req, res, { supabase }) => {
   try {

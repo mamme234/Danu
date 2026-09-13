@@ -1,5 +1,5 @@
 // Admin-only listing of users (used by /pages/portal/StaffUsers).
-import { withAuth, audit } from './_lib/auth'
+import { withAuth, audit } from './_lib/auth.js'
 
 export default withAuth({ requireUser: true, permission: 'staff.write' }, async (req, res, { supabase }) => {
   try {
